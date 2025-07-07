@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/Divyanshu-chauhan000/edubridge-backend/issues"
   },
-  "homepage": "https://github.com/Divyanshu-chauhan000/edubridge-backend#readme"
+  "homepage": "https://github.com/Divyanshu-chauhan000/edubridge-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.2"
+  }
 }
