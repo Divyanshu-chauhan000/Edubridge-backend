@@ -1,14 +1,14 @@
 const express = require("express"); // web server bnane k liy
 const mongoose = require("mongoose"); // MongoDB se bat krne k liy
 const cors = require("cors"); // Cross-Origin Resources sharing allow krta h
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 const User = require('./model')
 const JWT_SECRET = "mysecretkey";
 
 const app = express(); // express server ka object bnaya
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use("/uploads", express.static("uploads"));
 app.use(cors()); // allow krta ha react(Frontend) ko request bhjne k liy
@@ -185,5 +185,5 @@ app.put('/api/user/:id' , async(req, res)=>{
 })
 
 app.listen(PORT, () => {
-  console.log(`server runing on https://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
